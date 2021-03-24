@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet  id="1"  author="vitalina">
+        <createTable  tableName="manager">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="fio"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="phone"  type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="2"  author="vitalina">
+        <createTable  tableName="status_order">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="name"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="description"  type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="3"  author="vitalina">
+        <createTable  tableName="client">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="phone_number"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="email"  type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="fio"  type="text">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column  name="passport_number"  type="text">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column  name="identification_number"  type="text">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column  name="date_of_issue"  type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="validity_period"  type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="issued_by_whom"  type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="residence_address"  type="text">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="4"  author="vitalina">
+        <createTable  tableName="driving_license">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="number"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="category"  type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="date_of_issue"  type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="validity_period"  type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="client_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_client_id" references="client(id)" deleteCascade="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="5"  author="vitalina">
+        <createTable  tableName="technical_inspection">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="number"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="date_of_issue"  type="date">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="validity_period"  type="int">
+                <constraints  nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="6"  author="vitalina">
+        <createTable  tableName="insurance_policy">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="number"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="date_of_issue"  type="date">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="validity_period"  type="int">
+                <constraints  nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="7"  author="vitalina">
+        <createTable  tableName="insurance_claim">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="name"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="description"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="date_time"  type="timestamp">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="insurance_policy_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_insurance_policy_id" references="insurance_policy(id)" deleteCascade="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="8"  author="vitalina">
+        <createTable  tableName="status_car">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="name"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="description"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="9"  author="vitalina">
+        <createTable  tableName="car_group">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="name"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="description"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="10"  author="vitalina">
+        <createTable  tableName="car_brand">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="name"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="description"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet  id="11"  author="vitalina">
+        <createTable  tableName="car">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="number"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="name"  type="text">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="win_number"  type="text">
+                <constraints  nullable="false" unique="true"/>
+            </column>
+            <column  name="year_of_release"  type="int">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="cost_minute"  type="decimal">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="is_available"  type="boolean"  defaultValueBoolean="true">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="car_group_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_car_group_id" references="car_group(id)" deleteCascade="true" />
+            </column>
+            <column  name="car_brand_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_car_brand_id" references="car_brand(id)" deleteCascade="true" />
+            </column>
+            <column  name="status_car_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_status_car_id" references="status_car(id)" deleteCascade="true" />
+            </column>
+            <column  name="technical_inspection_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_technical_inspection_id" references="technical_inspection(id)" deleteCascade="true" />
+            </column>
+            <column  name="insurance_policy_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_insurance_policy_id" references="insurance_policy(id)" deleteCascade="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  id="12"  author="vitalina">
+        <createTable  tableName="client_order">
+            <column  name="id"  type="serial" autoIncrement="true">
+                <constraints  primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="comment"  type="text"/>
+            <column  name="order_date_time"  type="timestamp">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="date_time_start_rent"  type="timestamp">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="date_time_finish_rent"  type="timestamp">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="cost"  type="decimal">
+                <constraints  nullable="false"/>
+            </column>
+            <column  name="client_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_client_id" references="client(id)" deleteCascade="true" />
+            </column>
+            <column  name="car_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_car_id" references="car(id)" deleteCascade="true"/>
+            </column>
+            <column  name="manager_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_manager_id" references="manager(id)" deleteCascade="true" />
+            </column>
+            <column  name="status_order_id"  type="serial">
+                <constraints nullable="false" foreignKeyName="fk_status_order_id" references="status_order(id)" deleteCascade="true" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="vitalina" id="5">
+        <insert tableName="status_car">
+            <column name="name" value="Ок"/>
+            <column name="description" value="Автомобиль в хорошем состоянии"/>
+        </insert>
+
+        <insert tableName="status_car">
+            <column name="name" value="Ремонт"/>
+            <column name="description" value="Автомобиль находится в ремонте"/>
+        </insert>
+
+        <insert tableName="status_car">
+            <column name="name" value="Недоступен"/>
+            <column name="description" value="Нельзя заюронировать автомобиль"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="vitalina" id="6">
+        <insert tableName="car_group">
+            <column name="name" value="эконом"/>
+            <column name="description" value="Автомобиль эконом класса"/>
+        </insert>
+
+        <insert tableName="car_group">
+            <column name="name" value="бизнес"/>
+            <column name="description" value="Автомобиль бизнесс класса"/>
+        </insert>
+
+        <insert tableName="car_group">
+            <column name="name" value="премиум"/>
+            <column name="description" value="Автомобиль премиум класса"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="vitalina" id="7">
+        <insert tableName="car_brand">
+            <column name="name" value="volkswagen"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="mercedes"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="bmw"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="audi"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="opel"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="geely"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="renault"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="mazda"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="kia"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="porsche"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+        <insert tableName="car_brand">
+            <column name="name" value="bentley"/>
+            <column name="description" value="Описание автомобиля"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="vitalina" id="8">
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234510"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234511"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234512"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234513"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234514"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234515"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234516"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234517"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234518"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234519"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234520"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234521"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234522"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234523"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234524"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="insurance_policy">
+            <column name="number" value="1234525"/>
+            <column name="date_of_issue" value="2021-01-01"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="vitalina" id="9">
+        <insert tableName="technical_inspection">
+            <column name="number" value="16"/>
+            <column name="date_of_issue" value="2021-01-07"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+
+        <insert tableName="technical_inspection">
+            <column name="number" value="15"/>
+            <column name="date_of_issue" value="2021-01-08"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+
+        <insert tableName="technical_inspection">
+            <column name="number" value="14"/>
+            <column name="date_of_issue" value="2021-01-07"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+
+        <insert tableName="technical_inspection">
+            <column name="number" value="13"/>
+            <column name="date_of_issue" value="2021-01-06"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="12"/>
+            <column name="date_of_issue" value="2021-01-06"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="11"/>
+            <column name="date_of_issue" value="2021-01-06"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="10"/>
+            <column name="date_of_issue" value="2021-01-05"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="9"/>
+            <column name="date_of_issue" value="2021-01-05"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="8"/>
+            <column name="date_of_issue" value="2021-01-05"/>
+            <column name="validity_period" value="2"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="7"/>
+            <column name="date_of_issue" value="2021-01-04"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="6"/>
+            <column name="date_of_issue" value="2021-01-04"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="5"/>
+            <column name="date_of_issue" value="2021-01-02"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="4"/>
+            <column name="date_of_issue" value="2021-01-03"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="3"/>
+            <column name="date_of_issue" value="2021-01-02"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="2"/>
+            <column name="date_of_issue" value="2021-01-03"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+        <insert tableName="technical_inspection">
+            <column name="number" value="1"/>
+            <column name="date_of_issue" value="2021-01-03"/>
+            <column name="validity_period" value="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="vitalina" id="10">
+        <insert tableName="car">
+            <column name="number" value="0001AB-7"/>
+            <column name="name" value="polo"/>
+            <column name="win_number" value="34GHCVt643782"/>
+            <column name="year_of_release" value="2018"/>
+            <column name="cost_minute" value="0.3"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="1"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="1"/>
+            <column name="insurance_policy_id" value="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="vitalina" id="11">
+        <insert tableName="car">
+            <column name="number" value="6601AB-7"/>
+            <column name="name" value="golf"/>
+            <column name="win_number" value="88RTCVT643782"/>
+            <column name="year_of_release" value="2016"/>
+            <column name="cost_minute" value="0.28"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="1"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="2"/>
+            <column name="insurance_policy_id" value="2"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="9922AB-7"/>
+            <column name="name" value="W2013"/>
+            <column name="win_number" value="AQDFE12VT3782"/>
+            <column name="year_of_release" value="2019"/>
+            <column name="cost_minute" value="0.45"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="2"/>
+            <column name="car_brand_id" value="2"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="3"/>
+            <column name="insurance_policy_id" value="3"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="0101AK-7"/>
+            <column name="name" value="S63AMG"/>
+            <column name="win_number" value="CCDFE123431782"/>
+            <column name="year_of_release" value="2020"/>
+            <column name="cost_minute" value="0.8"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="3"/>
+            <column name="car_brand_id" value="2"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="4"/>
+            <column name="insurance_policy_id" value="4"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="1211AK-7"/>
+            <column name="name" value="G12"/>
+            <column name="win_number" value="CCDFE1WE34FG77"/>
+            <column name="year_of_release" value="2016"/>
+            <column name="cost_minute" value="0.7"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="3"/>
+            <column name="car_brand_id" value="3"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="5"/>
+            <column name="insurance_policy_id" value="5"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="0001II-1"/>
+            <column name="name" value="A8"/>
+            <column name="win_number" value="UYUY346271HGFC"/>
+            <column name="year_of_release" value="2020"/>
+            <column name="cost_minute" value="0.75"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="3"/>
+            <column name="car_brand_id" value="4"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="6"/>
+            <column name="insurance_policy_id" value="6"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="4162II-7"/>
+            <column name="name" value="A6"/>
+            <column name="win_number" value="UYUY3462WEWQS"/>
+            <column name="year_of_release" value="2017"/>
+            <column name="cost_minute" value="0.5"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="2"/>
+            <column name="car_brand_id" value="4"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="7"/>
+            <column name="insurance_policy_id" value="7"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="4112IK-7"/>
+            <column name="name" value="Meriva"/>
+            <column name="win_number" value="LYUSWDA62WEWQS"/>
+            <column name="year_of_release" value="2016"/>
+            <column name="cost_minute" value="0.3"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="5"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="8"/>
+            <column name="insurance_policy_id" value="8"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="1388IK-7"/>
+            <column name="name" value="Emgrand 7"/>
+            <column name="win_number" value="LYUSWDA62764FS"/>
+            <column name="year_of_release" value="2018"/>
+            <column name="cost_minute" value="0.33"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="6"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="9"/>
+            <column name="insurance_policy_id" value="9"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="8251IM-7"/>
+            <column name="name" value="Logon"/>
+            <column name="win_number" value="QA543DA62764FS"/>
+            <column name="year_of_release" value="2016"/>
+            <column name="cost_minute" value="0.21"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="7"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="10"/>
+            <column name="insurance_policy_id" value="10"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="9012IM-7"/>
+            <column name="name" value="CX-9"/>
+            <column name="win_number" value="QA543DA6275671"/>
+            <column name="year_of_release" value="2020"/>
+            <column name="cost_minute" value="0.81"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="2"/>
+            <column name="car_brand_id" value="8"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="11"/>
+            <column name="insurance_policy_id" value="11"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="1234MM-7"/>
+            <column name="name" value="rio X-Ray"/>
+            <column name="win_number" value="QA22222A6275671"/>
+            <column name="year_of_release" value="2018"/>
+            <column name="cost_minute" value="0.3"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="9"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="12"/>
+            <column name="insurance_policy_id" value="12"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="6125SA-7"/>
+            <column name="name" value="taycan"/>
+            <column name="win_number" value="QA22222A621235"/>
+            <column name="year_of_release" value="2021"/>
+            <column name="cost_minute" value="1.2"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="2"/>
+            <column name="car_brand_id" value="10"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="13"/>
+            <column name="insurance_policy_id" value="13"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="1287SA-7"/>
+            <column name="name" value="macan"/>
+            <column name="win_number" value="LLIGF32A621235"/>
+            <column name="year_of_release" value="2018"/>
+            <column name="cost_minute" value="0.9"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="2"/>
+            <column name="car_brand_id" value="10"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="14"/>
+            <column name="insurance_policy_id" value="14"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="4425JA-7"/>
+            <column name="name" value="continental gtII"/>
+            <column name="win_number" value="FF128712421235"/>
+            <column name="year_of_release" value="2016"/>
+            <column name="cost_minute" value="0.8"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="3"/>
+            <column name="car_brand_id" value="11"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="15"/>
+            <column name="insurance_policy_id" value="15"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="number" value="3245JA-7"/>
+            <column name="name" value="passat"/>
+            <column name="win_number" value="GFR548712421235"/>
+            <column name="year_of_release" value="2017"/>
+            <column name="cost_minute" value="0.34"/>
+            <column name="is_available" value="true"/>
+            <column name="car_group_id" value="1"/>
+            <column name="car_brand_id" value="1"/>
+            <column name="status_car_id" value="1"/>
+            <column name="technical_inspection_id" value="16"/>
+            <column name="insurance_policy_id" value="16"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

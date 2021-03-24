@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet  author="vitalina"  id="1">
+        <insert tableName="manager">
+            <column  name="fio"  value="Акушевич Александр Мечиславович"/>
+            <column  name="phone"  value="+375291121212"/>
+        </insert>
+
+        <insert tableName="manager">
+            <column  name="fio"  value="Мандрик Марина Иосифовна"/>
+            <column  name="phone"  value="+375339991212"/>
+        </insert>
+    </changeSet>
+
+    <changeSet  author="vitalina"  id="2">
+        <insert tableName="status_order">
+            <column  name="name"  value="Ожидание подтверждения"/>
+            <column  name="description"  value="Подождите, пока менеджер подтвердит корректность ваших данных"/>
+        </insert>
+
+        <insert tableName="status_order">
+            <column  name="name"  value="Одобрено"/>
+            <column  name="description"  value="Менеджер одобрил корректность введенных данных"/>
+        </insert>
+
+        <insert tableName="status_order">
+            <column  name="name"  value="Отказ"/>
+            <column  name="description"  value="Менеджер отказ Вам в попытке забронировать автомобиль"/>
+        </insert>
+
+        <insert tableName="status_order">
+            <column  name="name"  value="Ожидание оплаты"/>
+            <column  name="description"  value="Ожидается оплата за аренду автомобиля"/>
+        </insert>
+
+        <insert tableName="status_order">
+            <column  name="name"  value="Оплачено"/>
+            <column  name="description"  value="Оплата успешно завершена"/>
+        </insert>
+
+        <insert tableName="status_order">
+            <column  name="name"  value="Аренда"/>
+            <column  name="description"  value="Находится в аренде"/>
+        </insert>
+
+        <insert tableName="status_order">
+            <column  name="name"  value="Завершено"/>
+            <column  name="description"  value="Завершена аренда"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
